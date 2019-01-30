@@ -33,20 +33,35 @@ class board():
         for columna in range( 1, 9 ): 
             for fila in range( 1, 3 ):                    
                 if ( fila == 1):
-                    if ( columna == 1):
-                        self.board[columna][fila] = pieces.rook("white", columna, fila, "rook") #torres
+                    if ( columna == 1 or columna == 8):
+                        self.board[fila][columna] = pieces.rook("white",  fila, columna,"rook") #torres
                     if ( columna == 2 or columna == 7):
-                        self.board[columna][fila] = pieces.knight("white", columna,  fila,"knight") #torres
+                        self.board[fila][columna] = pieces.knight("white",  fila, columna,"knight") #caballo de trolla
                     if ( columna == 3 or columna == 6):
-                        self.board[columna][fila]= pieces.bishoop("white", columna, fila,  "bishoop") #alfil
+                        self.board[fila][columna]= pieces.bishoop("white",  fila, columna,  "bishoop") #alfil
                     if ( columna == 4 ):
-                        self.board[columna] [fila]= pieces.queen("white",columna, fila,  "queen") #reina
+                        self.board[fila][columna]= pieces.queen("white",  fila, columna,  "queen") #reina
                     if ( columna == 5 ):
-                        self.board[columna][fila] = pieces.king("white", columna, fila,"king") #rey
+                        self.board[fila][columna] = pieces.king("white",  fila, columna,"king") #rey
                 if ( fila == 2 ):
-                    self.board[columna][fila]= pieces.pawn("white", columna, fila,  "pawn") #peones
-        
-                    
+                    self.board[fila][columna]= pieces.pawn("white",  fila, columna,  "pawn") #peones
+
+        for columna in range( 1, 9 ): 
+            for fila in range( 7, 9 ):                    
+                if ( fila == 8):
+                    if ( columna == 1 or columna == 8):
+                        self.board[fila][columna] = pieces.rook("black", fila, columna, "rook") #torres
+                    if ( columna == 2 or columna == 7):
+                        self.board[fila][columna] = pieces.knight("black", fila, columna,"knight") #caballo
+                    if ( columna == 3 or columna == 6):
+                        self.board[fila][columna]= pieces.bishoop("black", fila, columna,  "bishoop") #alfil
+                    if ( columna == 5 ):
+                        self.board[fila][columna]= pieces.queen("black",fila, columna,  "queen") #reina
+                    if ( columna == 4 ):
+                        self.board[fila][columna] = pieces.king("black", fila, columna,"king") #rey
+
+                if ( fila == 7 ):
+                    self.board[fila][columna]= pieces.pawn("black", fila, columna, "pawn") #peones
                     
             
 

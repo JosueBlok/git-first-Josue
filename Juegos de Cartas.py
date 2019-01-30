@@ -1,4 +1,3 @@
-
 import random
 class carta():
 
@@ -39,25 +38,6 @@ class mazo():
     def quitar_arriba(self): #quita un objeto carta del array self.cartas
         carta_quitada = self.cartas.pop()
         return carta_quitada.mostrar()
-
-    def poner_arriba(self, valor, simbolo): #agrega un objeto carta al array self.cartas
-        self.cartas.append(carta(valor,simbolo))
-        return carta(valor, simbolo).mostrar()
-
-    def poner_abajo(self, valor, simbolo): #pone una carta al principio del array(abajo) 
-        self.cartas.insert(0, carta(valor,simbolo))
-        return carta(valor, simbolo).mostrar()
-
-    def quitar_cualquiera(self, valor, simbolo): #quita la carta elegida y te la devuelve
-        quitar = carta(valor, simbolo).mostrar()
-        for idx, i in enumerate(self.cartas):
-            if i.mostrar() == quitar:
-                self.cartas.pop(idx)
-                return quitar
-            
-    def quitar_index(self, index): #quita una carta en el indice dado 
-        carta_quitada = self.cartas.pop(index)
-        return carta_quitada
 
 
         
@@ -193,14 +173,4 @@ def jugar_juego():
             print ("Ganaste pendejo")
             return True
         
-jugar_juego() 
-
-#print (mazo.quitar_index(51))
-#print (mazo.quitar_arriba().mostrar())
-#print (mazo.poner_arriba(0, 0))
-#mazo.poner_abajo(1, 0)
-#print (mazo.quitar_cualquiera(1, 0))
-
-#for i in mazo.cartas:
-#   print(i.mostrar())
-
+jugar_juego()

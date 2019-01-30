@@ -8,7 +8,7 @@ class piece():
 
 
 class pawn(piece):
-    def __str__(self): #function para que no imprima en lenguaje maquina
+    def __str__(self):  #function para que no imprima en lenguaje maquina
         return "p"
     #     # A pawn move one step by one but in the exit it can do two step in one move.
     
@@ -18,7 +18,7 @@ class knight(piece):
     # A knight (in spanish called horse), it can do a move of L in any directions
     # A knight can... like jump others pieces
     def __str__(self): #function para que no imprima en lenguaje maquina
-        return "K"
+        return "Kn"
 
 
 class bishoop(piece):
@@ -41,4 +41,5 @@ class queen(piece):
 
 class king(piece):  # PROGRESS
     def __str__(self): #function para que no imprima en lenguaje maquina
-        return "K"
+        return "Kg"
+
